@@ -12,6 +12,9 @@ cars <- na.omit(cars)
 
 glimpse(cars)
 
+# select merceds-benz car and transmission is manual
+cars_2017 <- cars[(cars$transmission == "manual" & cars$make == "Mercedes-Benz"),  ]
+
 # split data
 set.seed(42)
 n <- nrow(cars)
@@ -20,12 +23,17 @@ train_data <- cars[id, ]
 test_data <- cars[-id, ]
 
 # train a linear regression model  
-lm_model <- train(car_price ~ miles + engine_vol + engine_size, 
-                  data = train_data,
-                  method = "lm")
+ctrl <- trainControl(method = "cv",
+                     number = 5)
+
+model <- train(engine_size ~ year + model + engine_vol + feul_type,
+                     data = train_data,
+                     method = "knn",
+                     metric = "RMSE",
+                     trcontrol = ctrl)
 
 # predict a linear regression model
-p_test <- predict(lm_model, newdata=test_data)
+p_test <- predict(model, newdata=test_data)
 
 # evaluate
 error <- test_data$car_price - p_test
