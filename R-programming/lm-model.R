@@ -1,40 +1,47 @@
-install.packages("tidyverse")
+# install packages
 install.packages("caret")
+install.packages("tidyverse")
+install.packages("dplyr")
 
-library(tidyverse)
 library(caret)
+library(tidyverse)
+library(readxl)
+library(dplyr)
 
-# import data
-read.csv("cars.csv")
+# read supermarket_chrundata.csv file 
+supermarket <- read.csv("supermarket_churnData.csv")
 
-# remove null 
-cars <- na.omit(cars)
+# drop null
+supermarket <- na.omit(supermarket)
 
-glimpse(cars)
+# check null # true meaning not null
+mean(complete.cases(supermarket)) == 1 # true
 
-# select merceds-benz car and transmission is manual
-cars_2017 <- cars[(cars$transmission == "manual" & cars$make == "Mercedes-Benz"),  ]
+# see column and example data 
+glimpse(supermarket)
 
-# split data
+# select only male gender to train and test model
+male <- supermarket[supermarket$gender == "Male", ]
+
+# split data are train data 70% and test data 30% 
 set.seed(42)
-n <- nrow(cars)
-id <- sample(n, size=0.8*n)
-train_data <- cars[id, ]
-test_data <- cars[-id, ]
+n <- nrow(male)
+id <- sample(n, size=0.7*n)
+train_data <- male[id, ]
+test_data <- male[-id, ]
 
-# train a linear regression model  
+# train ratings model by branch, number_of_products, product_category, age, total_amount, tax_amount column 
 ctrl <- trainControl(method = "cv",
                      number = 5)
 
-model <- train(engine_size ~ year + model + engine_vol + feul_type,
+model <- train(ratings ~ branch + number_of_products + product_category + age + total_amount + tax_amount,
                      data = train_data,
                      method = "knn",
                      metric = "RMSE",
                      trcontrol = ctrl)
 
-# predict a linear regression model
+# test model 
 p_test <- predict(model, newdata=test_data)
 
-# evaluate
-error <- test_data$car_price - p_test
+error <- test_data$ratings - p_test
 rmse <- sqrt(mean(error**2))
