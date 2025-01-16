@@ -5,7 +5,6 @@ install.packages("dplyr")
 
 library(caret)
 library(tidyverse)
-library(readxl)
 library(dplyr)
 
 # read supermarket_chrundata.csv file 
