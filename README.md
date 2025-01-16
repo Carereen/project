@@ -5,7 +5,7 @@ My data science and analytics projects
 
 ### R programming
 * Supermarket Customer Ratings (glm model)
-* Car Transmission (lm model)
+* Car Transmission (knn model)
 
 ### Dashboard
 * Supermarket sales & profit dashboard in Power BI
