@@ -1,4 +1,4 @@
-# my projocts
+# my projects
 My data science and analytics projects
 
 ## My personal projects
