@@ -232,11 +232,11 @@ WITH
 	
 SELECT 
 	S.Firstname || ' ' || S.Lastname AS fullname,
-	s.Position,
-	s.Salary
+	S.Position,
+	S.Salary
 FROM salary_staff AS S
 JOIN custom_department AS C
-ON S.DepartmentId = c.DepartmentId;
+ON S.DepartmentId = C.DepartmentId;
 
 -- count number of employees for each position.
 SELECT
