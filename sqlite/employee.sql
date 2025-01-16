@@ -34,7 +34,6 @@ CREATE TABLE House (
 	PRIMARY KEY ('Id')
 	);
 
-
 -- create marital table.
 CREATE TABLE Marital (
 	MaritalId INT NOT NULL UNIQUE,
