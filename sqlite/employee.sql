@@ -31,28 +31,28 @@ CREATE TABLE employee (
 CREATE TABLE House (
 	HouseId INT NOT NULL UNIQUE,
 	House TEXT,
-	PRIMARY KEY ('Id')
+	PRIMARY KEY ('HouseId')
 	);
 
 -- create marital table.
 CREATE TABLE Marital (
 	MaritalId INT NOT NULL UNIQUE,
 	Mariatal_status TEXT,
-	PRIMARY KEY ('Id')
+	PRIMARY KEY ('MaritalId')
 	);
 
 -- create military table.
 CREATE TABLE Military (
 	MilitaryId INT NOT NULL UNIQUE,
 	Military_status TEXT,
-	PRIMARY KEY ('Id')
+	PRIMARY KEY ('MilitaryId')
 	);
 
 -- create province table.
 CREATE TABLE Province (
 	ProvinceId INT NOT NULL UNIQUE,
 	Province TEXT ,
-	PRIMARY KEY ('Id')
+	PRIMARY KEY ('ProvinceId')
 	);
 
 -- insert data to employee table.
