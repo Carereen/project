@@ -19,4 +19,4 @@ My data science and analytics projects
 * Supermarket dashboard and pivot table by Spreadsheet
 
 ### Sqlite 
-* employee table
+* Employee table
