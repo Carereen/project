@@ -11,7 +11,7 @@ class shopping:
 
     # create payment funtion
     def payment(self):
-        print(f"the price for procuct {self.name} is {self.price}.")
+        print(f"the price for product {self.name} is {self.price}.")
 
     # create inventory in stock
     def stock(self, amount):
