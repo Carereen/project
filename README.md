@@ -9,7 +9,7 @@ My data science and analytics projects
 
 ### dashboard
 * Supermarket sales & profit dashboard in Power BI
-* Supermarket sales & profit dashboard in tableau
+* Supermarket sales & profit dashboard in Tableau
 * Hotel Booking dashboard by Looker Studio
 
 ### Python programming
