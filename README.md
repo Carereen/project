@@ -1,4 +1,4 @@
-# my projects
+# My projects
 My data science and analytics projects
 
 ## My personal projects
@@ -7,16 +7,16 @@ My data science and analytics projects
 * Supermarket Customer Ratings (glm model)
 * Car Transmission (lm model)
 
-### dashboard
+### Dashboard
 * Supermarket sales & profit dashboard in Power BI
 * Supermarket sales & profit dashboard in Tableau
 * Hotel Booking dashboard by Looker Studio
 
 ### Python programming
-* supermarket system using Object-Oriented Programming principle
+* Supermarket system using Object Oriented Programming Principle
 
-### spreadsheet
+### Spreadsheet
 * Supermarket dashboard and pivot table by Spreadsheet
 
-### splite 
+### Sqlite 
 * employee table
