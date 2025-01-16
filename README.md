@@ -4,8 +4,8 @@ My data science and analytics projects
 ## My personal projects
 
 ### R programming
-* glm model
-* lm model
+* Supermarket Customer Ratings (glm model)
+* Car Transmission (lm model)
 
 ### dashboard
 * Supermarket sales & profit dashboard in Power BI
