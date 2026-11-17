@@ -8,6 +8,7 @@ My data science and analytics projects
 * Car Transmission (knn model)
 
 ### Dashboard
+* Oil Price Competitor Analysis Dashboard in Power BI
 * Supermarket sales & profit dashboard in Power BI
 * Supermarket sales & profit dashboard in Tableau
 * Hotel Booking dashboard by Looker Studio
